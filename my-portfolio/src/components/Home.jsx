@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImage from "../assets/heroImage.png";
 import { CgArrowRightR } from "react-icons/cg";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -15,8 +16,8 @@ const Home = () => {
         alt="image description"
       /> */}
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
+        <div className="flex flex-col mx-auto justify-center h-full">
+          <h2 className="text-4xl sm:text-6xl font-bold text-white">
             I'm a Web Developer
           </h2>
           <p className="text-gray-400 py-4 max-w-md">
@@ -34,15 +35,18 @@ const Home = () => {
             Js, and React,MongoDB.
           </p>
           <div>
-            <button
-              className="group text-white w-fit px-6 py-3 my-2 flex
-            items-center rounded-md bg-gradient-to-r from-cyan-500 cursor-pointer"
+            <Link
+              to="portfolio"
+              smooth
+              duration={500}
+              className="group shadow-lg text-white w-fit px-6 py-3 my-2 flex
+            items-center rounded-md bg-gradient-to-r from-cyan-500 shadow-purple-500 cursor-pointer"
             >
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
                 <CgArrowRightR size={30} className="ml-1" />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
         <div>
